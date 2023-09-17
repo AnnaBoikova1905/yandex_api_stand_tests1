@@ -2,12 +2,17 @@ headers = {
     "Content-Type": "application/json"
 }
 
-user_body = {
-    "firstName": "Анатолий",
-    "phone": "+79995553322",
-    "address": "г. Москва, ул. Пушкина, д. 10"
+order_body = {
+    "firstName": "Anna",
+    "lastName": "Boykova",
+    "address": "Konoha, 182 apt.",
+    "metroStation": 11,
+    "phone": "+7 980 654 25 53",
+    "rentTime": 6,
+    "deliveryDate": "2020-06-06",
+    "comment": "Come back to Konoha",
+    "color": [
+        "BLACK"
+    ]
 }
 
-product_ids = {
-    "ids": [1, 2, 3]
-}
