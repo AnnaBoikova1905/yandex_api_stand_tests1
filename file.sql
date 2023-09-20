@@ -35,10 +35,10 @@ psql (11.18 (Debian 11.18-0+deb10u1))
 Type "help" for help.
 
 # вывела список логинов курьеров с количеством их заказов в статусе «В доставке» (поле inDelivery = true).
-scooter_rent=# SELECT "Couriers"."login", COUNT("Orders"."courierId") FROM "Couriers" INNER JOIN "Orders" ON "Couriers"."id" = "Orders"."courierId" WHERE "Orders"."inDelivery" = true GROUP BY "Couriers"."login";
+scooter_rent=# SELECT "Couriers".login, COUNT ("Orders"."courierId") FROM "Couriers" LEFT OUTER JOIN "Orders" ON "Couriers".id = "Orders"."courierId" WHERE "Orders"."inDelivery" = true GROUP BY "Couriers".login;
  login | count
 -------+-------
- Anna  |    16
+ Anna  |     8
 (1 row)
 
 # вывела все трекеры заказов и их статусы
